@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Header -->
+<header th:fragment="cabecalho">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #7FDCE8FF">
+    <a th:href="@{/index}" class="navbar-brand" >
+      <img src="/img/logo-escola.png" width="100px"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMobile">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navMobile" class="navbar-collapse collapse justify-content-end">
+
+      <a th:href="@{/index}" class="btn-nav nav-item nav-link"><i class="bi bi-house-door"></i> Home</a>
+      <a class="btn-nav nav-item nav-link" th:href="@{inserirAlunos}"><i class="bi bi-person-plus"></i> Cadastrar Aluno</a>
+      <a class="btn-nav nav-item nav-link" th:href="@{filtro-alunos}" ><i class="bi bi-search"></i> Pesquisar Aluno</a>
+      <form action="/logout" method="post">
+        <button type="submit" class="btn-nav-sair nav-item nav-link btn-danger"><i class="bi bi-box-arrow-right"></i>Sair</button>
+      </form>
+
+    </div>
+  </nav>
+</header>
+<!-- Footer -->
+<footer th:fragment="rodape">
+  <div class="rodape">
+    <span>Todos os Direitos Reservados - 2022 &copy; Julius Cavalcante</span>
+  </div>
+</footer>
+</body>
+</html>
